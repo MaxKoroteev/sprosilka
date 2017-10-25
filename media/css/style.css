@@ -46,6 +46,15 @@ h4 {font-size:15px;line-height:15px;font-family:Georgia, serif;}
 
 /* FORMS */
 
+.form {}
+    .form-field {margin:0 0 10px;display:block;}
+        .form-label {line-height:20px;font-weight:bold;text-transform:uppercase;font-size:11px;color:#999;display:block;}
+        .form-label.required {color:#000;}
+        .form-radio-label {font-size:13px;margin:5px 5px 5px 0;display:inline-block;}
+        .form-image {max-width:100%;margin-bottom:10px;}
+    .form-button {margin-top:10px;}
+
+
 select.control {background:#fff;border:1px solid #ddd;color:#666;height:35px;font-size:13px;width:100%;}
 input.control  {background:#fff;border:1px solid #ddd;color:#666;height:35px;font-size:13px;width:100%;border-radius:2px;padding:0 5px;}
 input.control:focus, select.control:focus {border-color:#38c;box-shadow:0 0 3px rgba(51,136,204,0.5);}
@@ -167,9 +176,9 @@ body.popup-opened {overflow-y:hidden;}
                     .notifications-item a {color:#000;font-weight:bold;display:inline;}
                 .notifications-all {line-height:20px;margin:10px;}
 
-                .notifications-bonus {font-weight:bold;font-size:13px;min-width:10px;text-align:center;margin-right:5px;}
-                .notifications-bonus-plus  {color:#3b2;}
-                .notifications-bonus-minus {color:#b22;}
+                .notification-bonus {min-width:22px;font-weight:bold;font-size:13px;text-align:center;margin-right:5px;}
+                .notification-bonus-plus  {color:#3b2;}
+                .notification-bonus-minus {color:#b22;}
 
                 .notifications-list .notifications-item {border:1px solid #eee;border-bottom:0;}
                 .notifications-list .notifications-item:last-child {border-bottom:1px solid #eee;}
@@ -191,6 +200,8 @@ body.popup-opened {overflow-y:hidden;}
     .column-left {display:table-cell;width:200px;}
     .content {display:table-cell;}
         .document {padding:15px;background:#fff;border:1px solid #eee;border-radius:2px;}
+        .document-form {margin-top:20px;}
+            .document-title {margin:0 0 20px;}
     .column-right {display:table-cell;width:200px;padding-bottom:55px;}
 
 /* COLUMN MENU */
@@ -364,6 +375,10 @@ body.popup-opened {overflow-y:hidden;}
         .question-tag:hover {text-decoration:underline;}
         .question-answer {line-height:20px;font-size:14px;text-decoration:none;}
         .question-answer:hover {text-decoration:underline;}
+
+/* SEARCH RESULTS */
+
+.search-results-counter {margin:-15px 0 20px;color:#888;}
 
 /* QUESTION DETAIL */
 

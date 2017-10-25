@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block left %}{% endblock %}
+
+{% block content %}
+    <div class="content">
+
+        <div class="document document-form wrapper small">
+
+            <h1 class="document-title">Сменить email</h1>
+
+            <form method="POST" action=".">
+
+                <label class="form-field">
+                    <span class="form-label required">Новый email</span>
+                    <input class="control" type="email">
+                </label>
+
+                <button class="form-button button big">Сменить email</button>
+            </form>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block right %}{% endblock %}

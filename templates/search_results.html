@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block left %}{% endblock %}
+
+{% block content %}
+    <div class="content">
+
+        <div class="wrapper big">
+
+            <h1 class="list-title">Вопросы по запросу "русский язык"</h1>
+
+            <div class="search-results-counter">
+                5 ответов
+            </div>
+
+            {% include 'blocks/questions.html' with objects='123456789' %}
+
+            {% include 'blocks/pagination.html' %}
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block right %}{% endblock %}

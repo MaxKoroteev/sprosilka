@@ -29,7 +29,7 @@
                 </span>
                 <a class="logo" href="/">Sprosilka</a>
             </div>
-            <form class="search" method="GET" action=".">
+            <form class="search" method="GET" action="{% url 'search_results' %}">
                 <div class="search-input-wrapper">
                     <input class="search-input" type="text" placeholder="Поиск">
                 </div>
@@ -47,15 +47,15 @@
                             <a href="{% url 'user_notifications' %}" class="notifications-all">Все уведомления</a>
                         </span>
                     </span>
-                    <a href="{% url 'user' %}" class="profile-menu-call a">
-                        <img src="https://media2.giphy.com/media/Y9Lkinq9aw6Xu/200_s.gif">
-                    </a>
                     <span data-dropdown class="dropdown">
-                        <i class="settings fa fa-cog a" data-dropdown-call></i>
+                        <span class="profile-menu-call a" data-dropdown-call>
+                            <img src="https://media2.giphy.com/media/Y9Lkinq9aw6Xu/200_s.gif">
+                        </span>
                         <span data-dropdown-window class="dropdown-window menu right">
-                            <a href="#" class="menu-item">Редактировать профиль</a>
-                            <a href="#" class="menu-item">Сменить Email</a>
-                            <a href="#" class="menu-item active">Сменить пароль</a>
+                            <a href="{% url 'user' %}" class="menu-item">Профиль</a>
+                            <a href="{% url 'edit_profile' %}" class="menu-item">Редактировать профиль</a>
+                            <a href="{% url 'change_email' %}" class="menu-item">Сменить Email</a>
+                            <a href="{% url 'change_password' %}" class="menu-item active">Сменить пароль</a>
                             <a href="#" class="menu-item">Выйти</a>
                         </span>
                     </span>
@@ -206,7 +206,7 @@
                 <input class="control" type="text" required placeholder="Email">
                 <input class="control" type="text" required placeholder="Пароль">
                 <input class="control" type="text" required placeholder="Пароль ещё раз">
-                <label class="user-confirm">
+                <label class="checkbox-label">
                     <input type="checkbox"><span>Я согласен с условиями <a href="#" target="_blank">пользовательского соглашения</a></span>
                 </label>
             </div>

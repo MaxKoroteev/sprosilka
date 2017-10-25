@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block left %}{% endblock %}
+
+{% block content %}
+    <div class="content">
+
+        <div class="document document-form wrapper small">
+
+            <h1 class="document-title">Редактировать профиль</h1>
+
+            <form method="POST" action=".">
+
+                <label class="form-field">
+                    <span class="form-label required">Имя</span>
+                    <input class="control" type="password">
+                </label>
+                <span class="form-field">
+                    <span class="form-label required">Пол</span>
+                    <label class="form-radio-label"><input type="radio" checked> Мужской</label>
+                    <label class="form-radio-label"><input type="radio"> Женский</label>
+                </span>
+                <label class="form-field">
+                    <span class="form-label required">Фото</span>
+                    <input type="file">
+                </label>
+
+                <img src="https://media2.giphy.com/media/Y9Lkinq9aw6Xu/200_s.gif" class="form-image">
+
+                <div></div>
+
+                <button class="form-button button big">Сохранить</button>
+            </form>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block right %}{% endblock %}

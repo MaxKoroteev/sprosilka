@@ -25,6 +25,10 @@ urlpatterns = [
     url(r'^user/$',               TemplateView.as_view(template_name='user_questions.html'),     name='user'),
     url(r'^user/answers/$',       TemplateView.as_view(template_name='user_answers.html'),       name='user_answers'),
     url(r'^user/notifications/$', TemplateView.as_view(template_name='user_notifications.html'), name='user_notifications'),
+    url(r'^search/$',             TemplateView.as_view(template_name='search_results.html'),     name='search_results'),
+    url(r'^change-password/$',    TemplateView.as_view(template_name='change_password.html'),    name='change_password'),
+    url(r'^change-email/$',       TemplateView.as_view(template_name='change_email.html'),       name='change_email'),
+    url(r'^edit-profile/$',       TemplateView.as_view(template_name='edit_profile.html'),       name='edit_profile'),
 ]
 
 from django.conf.urls.static import static, settings
