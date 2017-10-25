@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block left %}{% endblock %}
+
+{% block content %}
+
+    <div class="content">
+
+        {% include 'blocks/user_detail_header.html' %}
+
+        <div class="questions-with-answers wrapper big">
+            {% for i in '0123456789' %}
+                <div class="question-with-answer">
+                    {% include 'blocks/question.html' %}
+                    {% include 'blocks/answer.html' %}
+                </div>
+            {% endfor %}
+
+            {% include 'blocks/pagination.html' %}
+
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block right %}{% endblock %}

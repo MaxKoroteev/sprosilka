@@ -1,0 +1,21 @@
+<div class="user-detail-header">
+
+    <div class="user-detail">
+        <a href="{% url 'user' %}" class="user-detail-avatar">
+            <img src="https://media2.giphy.com/media/Y9Lkinq9aw6Xu/200_s.gif">
+        </a>
+        <div class="user-detail-info">
+            <h1 class="user-detail-name">Мария Иванова</h1>
+            <div class="user-detail-rating">3423 балла</div>
+        </div>
+    </div>
+
+
+    <div class="tabs">
+        {% spaceless %}
+            <a class="tabs-tab{% if request.path == '/user/' %} active{% endif %}" href="{% url 'user' %}">Вопросы</a>
+            <a class="tabs-tab{% if request.path == '/user/answers/' %} active{% endif %}" href="{% url 'user_answers' %}">Ответы</a>
+        {% endspaceless %}
+    </div>
+
+</div>

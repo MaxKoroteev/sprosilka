@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Sprosilka.ru</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/media/css/style.css?v={% now 'U' %}" rel="stylesheet" type="text/css">
+
+    <link rel="icon" href="https://archive-ouverte.unige.ch/img/design/question_mark.png" type="image/png" />
+
+</head>
+<body>
+
+<div class="header" data-header>
+    <div class="wrapper">
+        <div class="header-table">
+            <div class="header-left">
+                <span data-dropdown class="menu-call-wrapper dropdown">
+                    <i class="fa fa-bars a menu-call" data-dropdown-call></i>
+                    <div data-dropdown-window class="dropdown-window menu">
+                        <a href="#" class="menu-item">О проекте</a>
+                        <a href="#" class="menu-item active">Правила использования</a>
+                        <a href="#" class="menu-item">Политика конфиденциальности</a>
+                        <span class="menu-item grey">© Sprosilka 2017</span>
+                    </div>
+                </span>
+                <a class="logo" href="/">Sprosilka</a>
+            </div>
+            <form class="search" method="GET" action=".">
+                <div class="search-input-wrapper">
+                    <input class="search-input" type="text" placeholder="Поиск">
+                </div>
+                <button class="fa fa-search search-button"></button>
+            </form>
+            <div class="header-right">
+                {% spaceless %}
+                    <span class="a login" data-popup="login"><i class="fa fa-sign-in"></i>Войти</span>
+                    <span data-dropdown class="dropdown">
+                        <i class="fa fa-bell-o notifications-call a" data-dropdown-call>
+                            <span class="notifications-counter">21</span>
+                        </i>
+                        <span data-dropdown-window class="dropdown-window right notifications">
+                            {% include 'blocks/notifications.html' with objects='1' %}
+                            <a href="{% url 'user_notifications' %}" class="notifications-all">Все уведомления</a>
+                        </span>
+                    </span>
+                    <a href="{% url 'user' %}" class="profile-menu-call a">
+                        <img src="https://media2.giphy.com/media/Y9Lkinq9aw6Xu/200_s.gif">
+                    </a>
+                    <span data-dropdown class="dropdown">
+                        <i class="settings fa fa-cog a" data-dropdown-call></i>
+                        <span data-dropdown-window class="dropdown-window menu right">
+                            <a href="#" class="menu-item">Редактировать профиль</a>
+                            <a href="#" class="menu-item">Сменить Email</a>
+                            <a href="#" class="menu-item active">Сменить пароль</a>
+                            <a href="#" class="menu-item">Выйти</a>
+                        </span>
+                    </span>
+                    <button class="post-question button" data-popup="ask-question">Задать вопрос</button>
+                {% endspaceless %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+
+    <div class="container">
+        {% block left %}
+            <div class="column-left">
+                <div class="column-menu" data-fixed>
+                    <a href="#" class="column-menu-item">Английский язык</a>
+                    <a href="#" class="column-menu-item">Математика</a>
+                    <a href="#" class="column-menu-item active">Русский язык</a>
+                    <a href="#" class="column-menu-item">Физика</a>
+                    <a href="#" class="column-menu-item">Химия</a>
+                    <a href="#" class="column-menu-item">Биология</a>
+                    <a href="#" class="column-menu-item">География</a>
+                    <a href="#" class="column-menu-item">Изобразительное искусство</a>
+                    <a href="#" class="column-menu-item">Информатика</a>
+                    <a href="#" class="column-menu-item">Испанский язык</a>
+                    <a href="#" class="column-menu-item">История</a>
+                    <a href="#" class="column-menu-item">Итальянский язык</a>
+                    <a href="#" class="column-menu-item">Китайский язык</a>
+                    <a href="#" class="column-menu-item">Литература</a>
+                    <a href="#" class="column-menu-item">Логопед</a>
+                    <a href="#" class="column-menu-item">Музыка</a>
+                    <a href="#" class="column-menu-item">Начальная школа</a>
+                    <a href="#" class="column-menu-item">Немецкий язык</a>
+                    <a href="#" class="column-menu-item">Обществознание</a>
+                    <a href="#" class="column-menu-item">Подготовка к школе</a>
+                    <a href="#" class="column-menu-item">Спорт и фитнес</a>
+                    <a href="#" class="column-menu-item">Французский язык</a>
+                    <a href="#" class="column-menu-item">Экономика</a>
+                    <a href="#" class="column-menu-item">Японский язык</a>
+                </div>
+            </div>
+        {% endblock %}
+        {% block content %}
+            <div class="content">
+
+                {% include 'blocks/post.html' with type='question' placeholder='Какой у вас вопрос?' %}
+
+                <h1 class="title">Вопросы по русскому языку</h1>
+
+                <div class="description default" data-description>
+                    <span class="description-text" data-description-text>
+                        Здесь собраны вопросы по русскому языку здесь собраны вопросы по русскому языку ля-ля-ля.
+                        <span data-description-hide class="description-hide a">Скрыть</span>
+                    </span>
+                    <span data-description-show class="description-show a">Далее</span>
+                </div>
+
+                <div class="questions">
+                    {% include 'blocks/questions.html' with objects='0123456789' %}
+                </div>
+
+                <span class="spinner"><i></i></span>
+
+            </div>
+        {% endblock %}
+        {% block right %}
+            <div class="column-right">
+                {% block block %}
+
+                    <div class="column-block" data-fixed>
+
+                        <h4 class="column-block-title">Лучшие в категории</h4>
+
+                        <div class="best-users">
+                            {% for i in '12345' %}
+                                {% include 'blocks/user.html' with class='column-block-user' postscript='4123 балла' %}
+                            {% endfor %}
+                        </div>
+
+                        <a href="{% url 'users' %}" class="best-view-all">Все пользователи</a>
+
+                    </div>
+
+                {% endblock %}
+
+                <span class="go-top a" data-go-top><i class="fa fa-angle-up"></i>Наверх</span>
+
+            </div>
+        {% endblock %}
+    </div>
+</div>
+<div class="popup-wrapper" id="ask-question">
+    <div class="popup wrapper medium" data-popup-content>
+        <div class="popup-header">
+            <div class="popup-title">Задать вопрос</div>
+            <div class="popup-close fa fa-times a" data-popup-close></div>
+        </div>
+        <div class="popup-content no-padding">
+            {% include 'blocks/post.html' with type='question' rows=2 placeholder='Какой у вас вопрос?' %}
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper" id="login">
+    <form method="post" action="." class="popup wrapper small" data-popup-content>
+        <div class="popup-header">
+            <div class="popup-title">Вход</div>
+            <div class="popup-close fa fa-times a" data-popup-close></div>
+        </div>
+
+{#        <div class="social-auth">#}
+{#            <span class="social-auth-item"></span><span class="social-auth-item"></span>#}
+{#        </div>#}
+
+        <div class="popup-content">
+
+{#            <div class="popup-mini-title">#}
+{#                Войти с помощью email#}
+{#            </div>#}
+
+            <div class="popup-controls">
+                <input class="control" type="text" placeholder="Email">
+                <input class="control" type="text" placeholder="Пароль">
+            </div>
+
+            <span class="remember-password-link a" data-popup="remember-password">Забыли пароль?</span>
+
+        </div>
+        <div class="popup-footer">
+            {% spaceless %}
+                <button class="button big">Войти</button>
+                <span class="auth-link a" data-popup="registration">Регистрация с помощью email</span>
+            {% endspaceless %}
+        </div>
+    </form>
+</div>
+
+<div class="popup-wrapper" id="registration">
+    <form method="post" action="." class="popup wrapper small" data-popup-content>
+        <div class="popup-header">
+            <div class="popup-title">Регистрация</div>
+            <div class="popup-close fa fa-times a" data-popup-close></div>
+        </div>
+        <div class="popup-content">
+            <div class="popup-controls">
+                <input class="control" type="text" required placeholder="Имя пользователя">
+                <input class="control" type="text" required placeholder="Email">
+                <input class="control" type="text" required placeholder="Пароль">
+                <input class="control" type="text" required placeholder="Пароль ещё раз">
+                <label class="user-confirm">
+                    <input type="checkbox"><span>Я согласен с условиями <a href="#" target="_blank">пользовательского соглашения</a></span>
+                </label>
+            </div>
+        </div>
+        <div class="popup-footer">
+            {% spaceless %}
+                <button class="button big">Зарегистрироваться</button>
+                <span class="auth-link a" data-popup="login">Войти</span>
+            {% endspaceless %}
+        </div>
+    </form>
+</div>
+
+<div class="popup-wrapper" id="remember-password">
+    <form method="post" action="." class="popup wrapper small" data-popup-content>
+        <div class="popup-header">
+            <div class="popup-title">Забыли пароль?</div>
+            <div class="popup-close fa fa-times a" data-popup-close></div>
+        </div>
+
+        <div class="popup-content">
+
+            <input class="control" type="text" placeholder="Email">
+
+        </div>
+        <div class="popup-footer">
+            {% spaceless %}
+                <button class="button big">Напомнить</button>
+            {% endspaceless %}
+        </div>
+    </form>
+</div>
+
+<div class="alerts" data-alerts>
+    <div class="alert template" data-alert data-alert-template>
+        <div class="alert-icon fa" data-alert-icon></div>
+        <div class="alert-text" data-alert-text></div>
+        <div class="alert-close fa fa-times a" data-alert-close></div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+
+<script src="/media/js/global.js"></script>
+<script src="/media/js/dropdown.js"></script>
+<script src="/media/js/alert.js"></script>
+<script src="/media/js/description.js"></script>
+<script src="/media/js/go-top.js"></script>
+<script src="/media/js/fixed.js"></script>
+<script src="/media/js/post.js"></script>
+<script src="/media/js/popup.js"></script>
+
+<script>
+    $('[data-button-answer]').on('click', function() {
+        $($html, $body).animate({
+            scrollTop: $("[data-scroll-bottom]").offset().top
+        }, 0);
+        $('[data-post-textarea-answer]').focus();
+    });
+</script>
+
+</body>
+</html>

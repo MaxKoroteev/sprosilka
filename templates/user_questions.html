@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block left %}{% endblock %}
+
+{% block content %}
+
+    <div class="content">
+
+        {% include 'blocks/user_detail_header.html' %}
+
+        <div class="questions user-detail-questions wrapper big">
+
+            {% include 'blocks/questions.html' with objects='0123456789' %}
+
+            {% include 'blocks/pagination.html' %}
+
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block right %}{% endblock %}

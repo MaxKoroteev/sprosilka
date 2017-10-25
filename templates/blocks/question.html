@@ -1,0 +1,14 @@
+<div class="question">
+
+    {% include 'blocks/rating.html' with rating_up='Мне тоже интересно узнать' rating_down='Некорректный вопрос' %}
+
+    <div class="question-content">
+
+        {% include 'blocks/user_actions.html' %}
+
+        <a href="{% url 'question' %}" class="question-name">Как пишется "жи" и "ши"?</a>
+        <div class="question-info">5 минут назад · <a href="{% url 'home' %}" class="question-tag">Русский язык</a></div>
+        <a href="{% url 'question' %}" class="question-answer">{% if i == '0' %}Ответить{% else %}{{ i }} ответов{% endif %}</a>
+    </div>
+
+</div>

@@ -1,0 +1,15 @@
+<div class="answer">
+
+    {% include 'blocks/rating.html' with rating_up='Хороший ответ' rating_down='Некорректный ответ' %}
+
+    <div class="item">
+
+        {% include 'blocks/user_actions.html' with is_answer=True %}
+
+        {% include 'blocks/user.html' with postscript='5 минут назад' %}
+
+        <div class="answer-content">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="user-actions">
+    {% spaceless %}
+        <a href="#" class="fa fa-pencil user-action" title="Редактировать"></a>
+        <a href="#" class="fa fa-trash-o user-action" title="Удалить"></a>
+        {% if is_answer %}
+            <a href="#" class="fa fa-check user-action{% if i == '1' %} right-answer{% endif %}"></a>
+        {% endif %}
+    {% endspaceless %}
+</div>

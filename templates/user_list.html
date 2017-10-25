@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="content">
+
+        <div class="breadcrumbs">
+            {% spaceless %}
+                <a href="{% url 'home' %}">Главная</a>
+                <i class="fa fa-chevron-right"></i>
+                <a href="{% url 'users' %}">Пользователи</a>
+                <i class="fa fa-chevron-right"></i>
+                <span>Русский язык</span>
+            {% endspaceless %}
+        </div>
+
+        <div>
+            <h1>Лучшие в категории "Русский язык"</h1>
+            <div class="users">
+                {% for i in '1234567890' %}
+                    <div class="item">
+                        {% include 'blocks/user.html' with postscript='315 баллов' %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            {% include 'blocks/pagination.html' %}
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block block %}
+    <div class="column-block" data-fixed>
+
+        <h4 class="column-block-title">Как сюда попасть?</h4>
+
+        <div class="column-block-info">
+            Задавайте интересные вопросы, давайте правильные и развёрнутые ответы
+        </div>
+
+    </div>
+{% endblock %}

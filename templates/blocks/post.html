@@ -1,0 +1,20 @@
+<form class="post post-{{ type }}{% if type == 'answer' %} opened{% endif %}" method="POST" action="."{% if type == 'question' %} data-post{% endif %}>
+    <div class="post-content">
+        <div class="post-avatar">
+            <a href="#" class="post-avatar-link">
+                <img src="https://media2.giphy.com/media/Y9Lkinq9aw6Xu/200_s.gif">
+            </a>
+        </div>
+        <div class="post-textarea-wrapper">
+            <textarea rows="{% if rows %}{{ rows }}{% else %}1{% endif %}" class="post-textarea"{% if type %} data-post-textarea-{{ type }}{% endif %} data-post-textarea {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}></textarea>
+        </div>
+    </div>
+    <div class="post-footer">
+        {% if type == 'question' %}
+            <select class="post-column-menu-item control medium"><option>Русский язык</option></select>
+            <button class="button">Задать вопрос<span class="spinner"><i></i></span></button>
+        {% elif type == 'answer' %}
+            <button class="button">Ответить<span class="spinner"><i></i></span></button>
+        {% endif %}
+    </div>
+</form>
