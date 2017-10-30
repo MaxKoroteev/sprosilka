@@ -6,10 +6,12 @@
 
     <title>Спросилка.ru</title>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="/media/css/style.css?v={% now 'U' %}" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="icon" href="https://archive-ouverte.unige.ch/img/design/question_mark.png" type="image/png" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/media/css/style.css?v={% now 'U' %}" rel="stylesheet" type="text/css">
 
 </head>
 <body>
@@ -17,51 +19,63 @@
 <div class="header" data-header>
     <div class="wrapper">
         <div class="header-table">
-            <div class="header-left">
-                <span data-dropdown class="menu-call-wrapper dropdown">
-                    <i class="fa fa-bars a menu-call" data-dropdown-call></i>
-                    <div data-dropdown-window class="dropdown-window menu">
-                        <a href="#" class="menu-item">О проекте</a>
-                        <a href="#" class="menu-item active">Правила использования</a>
-                        <a href="#" class="menu-item">Политика конфиденциальности</a>
-                        <span class="menu-item grey">© Sprosilka 2017</span>
-                    </div>
-                </span>
-                <a class="logo" href="/">Спросилка</a>
-            </div>
+            {% spaceless %}
+
+            <span data-dropdown>
+                <i class="header-item header-item-icon header-menu-wrapper fa fa-bars" data-dropdown-call></i>
+                <div data-dropdown-window class="dropdown-window header-menu">
+                    <a href="#" class="header-menu-item">О проекте</a>
+                    <a href="#" class="header-menu-item active">Правила использования</a>
+                    <a href="#" class="header-menu-item">Политика конфиденциальности</a>
+                    <span class="header-menu-item grey">© Sprosilka 2017</span>
+                </div>
+            </span>
+
+            <span class="logo">
+                <a href="/">Спросилка</a>
+            </span>
+
             <form class="search" method="GET" action="{% url 'search_results' %}">
                 <div class="search-input-wrapper">
                     <input class="search-input" type="text" placeholder="Поиск">
                 </div>
                 <button class="fa fa-search search-button"></button>
             </form>
-            <div class="header-right">
-                {% spaceless %}
-                    <span class="a login" data-popup="login"><i class="fa fa-sign-in"></i>Войти</span>
-                    <span data-dropdown class="dropdown">
-                        <i class="fa fa-bell-o notifications-call a" data-dropdown-call>
-                            <span class="notifications-counter">21</span>
-                        </i>
-                        <span data-dropdown-window class="dropdown-window right notifications">
-                            {% include 'blocks/notifications.html' with objects='1' %}
-                            <a href="{% url 'user_notifications' %}" class="notifications-all">Все уведомления</a>
-                        </span>
-                    </span>
-                    <span data-dropdown class="dropdown">
-                        <span class="profile-menu-call a" data-dropdown-call>
-                            <img src="https://media2.giphy.com/media/Y9Lkinq9aw6Xu/200_s.gif">
-                        </span>
-                        <span data-dropdown-window class="dropdown-window menu right">
-                            <a href="{% url 'user' %}" class="menu-item">Профиль</a>
-                            <a href="{% url 'edit_profile' %}" class="menu-item">Редактировать профиль</a>
-                            <a href="{% url 'change_email' %}" class="menu-item">Сменить Email</a>
-                            <a href="{% url 'change_password' %}" class="menu-item active">Сменить пароль</a>
-                            <a href="#" class="menu-item">Выйти</a>
-                        </span>
-                    </span>
-                    <button class="post-question button" data-popup="ask-question">Задать вопрос</button>
-                {% endspaceless %}
-            </div>
+
+            <!--span class="header-item" data-popup="login"><i class="fa fa-sign-in"></i>Войти</span-->
+                
+            <span data-dropdown>
+                <i class="header-item header-item-icon fa fa-bell-o" data-dropdown-call>
+                    <span class="header-item-counter">21</span>
+                </i>
+                <span data-dropdown-window class="dropdown-window right notifications">
+                    {% include 'blocks/notifications.html' with objects='1' %}
+                    <a href="{% url 'user_notifications' %}" class="notifications-all">Все уведомления</a>
+                </span>
+            </span>
+            <span data-dropdown>
+
+                <span class="header-item header-item-icon" data-dropdown-call>
+                    <img class="header-item-image" src="https://media2.giphy.com/media/Y9Lkinq9aw6Xu/200_s.gif">
+                </span>
+
+                <span data-dropdown-window class="dropdown-window header-menu right">
+                    <a class="header-menu-item" href="{% url 'user' %}">Профиль</a>
+                    <a class="header-menu-item" href="{% url 'edit_profile' %}">Редактировать профиль</a>
+                    <a class="header-menu-item" href="{% url 'change_email' %}">Сменить Email</a>
+                    <a class="header-menu-item active" href="{% url 'change_password' %}">Сменить пароль</a>
+                    <a class="header-menu-item" href="#">Выйти</a>
+                </span>
+
+            </span>
+            <span class="header-item-button">
+                <button class="button" data-popup="ask-question">
+                    <span class="ask-question-text">Задать вопрос</span>
+                    <span class="ask-question-icon fa fa-question"></span>
+                </button>
+            </span>
+
+            {% endspaceless %}
         </div>
     </div>
 </div>
