@@ -45,6 +45,16 @@ h4 {font-size:15px;line-height:15px;font-family:Georgia, serif;}
 
 .list-title {margin:20px 0;}
 
+@media (max-width:760px) {
+    h1 {font-size:19px;line-height:20px;}
+    h2 {font-size:17px;line-height:18px;}
+    h3 {font-size:15px;line-height:16px;}
+    h4 {font-size:13px;line-height:14px;}
+
+    .list-title {margin:10px 0;}
+
+}
+
 /* FORMS */
 
 .form {}
@@ -378,7 +388,7 @@ body.popup-opened {overflow-y:hidden;}
 
 .question {display:table;margin:10px 0;}
     .question-content {display:table-cell;}
-        .question-name {display:inline;line-height:20px;font-size:18px;text-decoration:none;color:#000;font-family:Georgia, serif;font-weight:bold;}
+        .question-name {display:inline;line-height:20px;text-decoration:none;color:#000;font-family:Georgia, serif;font-weight:bold;}
         .question-name:hover {text-decoration:underline;}
         .question-info {line-height:17px;font-size:13px;color:#aaa;margin:5px 0;}
         .question-detail .question-info {line-height:15px;font-size:14px;margin:5px 0 0;}

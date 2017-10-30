@@ -6,7 +6,7 @@
 
         {% include 'blocks/user_actions.html' %}
 
-        <a href="{% url 'question' %}" class="question-name">Как пишется "жи" и "ши"?</a>
+        <h3><a href="{% url 'question' %}" class="question-name">Как пишется "жи" и "ши"?</a></h3>
         <div class="question-info">5 минут назад · <a href="{% url 'home' %}" class="question-tag">Русский язык</a></div>
         <a href="{% url 'question' %}" class="question-answer">{% if i == '0' %}Ответить{% else %}{{ i }} ответов{% endif %}</a>
     </div>
