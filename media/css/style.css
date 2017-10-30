@@ -357,6 +357,7 @@ body.popup-opened {overflow-y:hidden;}
 /* RATING */
 
 .rating {display:table-cell;width:30px;text-align:center;padding-right:15px;}
+@media (max-width:760px) {.rating {padding-right:10px;}}
 .question-detail .rating {padding-right:10px;padding-top:5px;}
 
     .rating-up {border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:15px solid #ccc;position:relative;cursor:pointer;}
