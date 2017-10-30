@@ -130,7 +130,7 @@ body.popup-opened {overflow-y:hidden;}
                 .header-menu-item.grey:hover {background:#fff;text-decoration:none;}
 
             .logo {text-transform:uppercase;padding-left:10px;line-height:50px;width:170px;color:#333;font-size:18px;text-decoration:none;font-family:Georgia, serif;font-weight:bold;}
-            @media (max-width:760px) {.logo {line-height:40px;font-size:16px;}}
+            @media (max-width:760px) {.logo {font-size:16px;}}
                 .logo a {color:#000;}
                 .logo:hover a {text-decoration:none;}
 
@@ -160,7 +160,7 @@ body.popup-opened {overflow-y:hidden;}
             .search button {}
 
         .header-item {padding:0 15px;line-height:50px;color:#777;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
-        @media (max-width:760px) {.header-item {line-height:40px;padding:0 10px;}}
+        @media (max-width:760px) {.header-item {padding:0 10px;}}
         .header-item:hover  {background:#f1f1f1;color:#666;text-decoration:none;}
         .header-item:active {background:#f1f1f1;}
         .header-item.active {background:#f1f1f1;color:#666;}
