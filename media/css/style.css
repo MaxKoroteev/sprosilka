@@ -102,7 +102,7 @@ select.control.medium {height:30px;width:auto;}
 /* POPUP */
 
 body.popup-opened {overflow-y:hidden;}
-.popup-wrapper {position:fixed;padding:70px 0 20px;top:0;left:0;right:0;bottom:0;z-index:4;background:rgba(0,0,0,0.5);overflow-y:scroll;display:none;}
+.popup-wrapper {position:fixed;padding:70px 10px 20px;top:0;left:0;right:0;bottom:0;z-index:4;background:rgba(0,0,0,0.5);overflow-y:scroll;display:none;}
     .popup {background:#fff;border-radius:2px;box-shadow:0 0 20px rgba(0,0,0,0.5);}
     .popup-header {display:table;min-width:50px;border-bottom:1px solid #eee;width:100%;}
         .popup-title {display:table-cell;line-height:20px;padding:15px;font-size:18px;}
@@ -295,6 +295,8 @@ body.popup-opened {overflow-y:hidden;}
 .post {border-radius:2px;border:1px solid #eee;background:#fff;margin:20px 0 20px;}
 @media (max-width:760px) {.post {margin:10px 0;}}
 .post-answer {margin-left:40px;}
+@media (max-width:760px) {.post-answer {margin-left:0;}}
+
 .popup .post {background:none;border:0;margin:0;}
     .post-content {display:table;width:100%;}
         .post-avatar {display:table-cell;width:60px;padding:15px;}
