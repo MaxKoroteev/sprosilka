@@ -168,7 +168,7 @@ body.popup-opened {overflow-y:hidden;}
         .header-item .fa {vertical-align:middle;}
 
         .header-item-button {padding:10px 0 10px 10px;}
-        @media (max-width:760px) {.header-item-button {padding:5px 0 5px 5px;}}
+        /*@media (max-width:760px) {.header-item-button {padding:5px 0 5px 5px;}}*/
 
         .header-item-icon {padding:0;text-align:center;width:50px;color:#bbb;font-size:21px;}
         @media (max-width:760px) {.header-item-icon {width:40px;}}
