@@ -111,15 +111,17 @@
                     <a href="#" class="column-menu-item">Экономика</a>
                     <a href="#" class="column-menu-item">Японский язык</a>
                 </div>
-                <select class="column-menu-mobile">
-                    <option>Все вопросы</option>
-                    <option>Химия</option>
-                    <option>Биология</option>
-                    <option>География</option>
-                    <option>Изобразительное искусство</option>
-                    <option>Информатика</option>
-                    <option>Испанский язык</option>
-                </select>
+                <div class="mobile-wrapper">
+                    <select class="column-menu-mobile">
+                        <option>Все вопросы</option>
+                        <option>Химия</option>
+                        <option>Биология</option>
+                        <option>География</option>
+                        <option>Изобразительное искусство</option>
+                        <option>Информатика</option>
+                        <option>Испанский язык</option>
+                    </select>
+                </div>
             </div>
         {% endblock %}
         {% block content %}
@@ -127,14 +129,18 @@
 
                 {% include 'blocks/post.html' with type='question' placeholder='Какой у вас вопрос?' %}
 
-                <h1 class="title">Вопросы по русскому языку</h1>
+                <div class="mobile-wrapper">
 
-                <div class="description default" data-description>
-                    <span class="description-text" data-description-text>
-                        Здесь собраны вопросы по русскому языку здесь собраны вопросы по русскому языку ля-ля-ля.
-                        <span data-description-hide class="description-hide a">Скрыть</span>
-                    </span>
-                    <span data-description-show class="description-show a">Далее</span>
+                    <h1 class="title">Вопросы по русскому языку</h1>
+
+                    <div class="description default" data-description>
+                        <span class="description-text" data-description-text>
+                            Здесь собраны вопросы по русскому языку здесь собраны вопросы по русскому языку ля-ля-ля.
+                            <span data-description-hide class="description-hide a">Скрыть</span>
+                        </span>
+                        <span data-description-show class="description-show a">Далее</span>
+                    </div>
+
                 </div>
 
                 <div class="questions">
